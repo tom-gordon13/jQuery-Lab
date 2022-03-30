@@ -1,16 +1,102 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+}
+
+:root {
+    --container-width: 40vw;
+    --body-green: #88BC72;
+
+}
+
 body{
+    height: 100vh;
+    width: 100vw;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    align-content: center;
 }
 
 #container{
-    height: 30vh;
-    width: 50vw;
-    background-color: red;
+    width: var(--container-width);
+    background-color: white;
     display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-rows: 50px 2fr 1fr;
+    margin-top: 60px;
 }
 
+header{
+    background-color: var(--body-green);
+    color: white;
+    grid-row: 1 / span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: var(--container-width);
+    font-size: 5vh;
+}
+
+ul#middle{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: var(--container-width);
+    list-style: none;
+    padding-left: 0;
+    margin: 2px;
+}
+
+li.entry{
+    margin: 0;
+    height: 10vh;
+    width: var(--container-width);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+}
+
+button.delete {
+    padding: 0px;
+    border: none;
+    color: white;
+    background-color: #DC5B5B;
+    height: 5vh;
+    width: 5vh;
+}
+
+p{
+    display: inline;
+    padding-left: 5px;
+    color: #FFA431;
+    font-size: 3vh;
+}
+
+#bottom{
+    grid-row: 3 / span 1;
+    display: flex;
+
+}
+
+input{
+    height: 10vh;
+    width: 28vw;
+    border: solid 1vh var(--body-green);
+    margin-right: 2vw;
+    font-size: 5vh;
+    padding-left: 5px;
+}
+
+button#add{
+    border: solid 1vh var(--body-green);
+    height: 10vh;
+    width: 10vw;
+    background-color: white;
+    color: var(--body-green);
+    font-size: 2.5vh;
+}
 
